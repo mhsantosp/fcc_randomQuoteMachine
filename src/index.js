@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Prueba from './Components/randomQuoteMachine';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Prueba />
   </React.StrictMode>,
   document.getElementById('root')
 );

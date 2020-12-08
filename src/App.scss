@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+
+.body {
+  background-color: purple;
+  .row {
+    .box {
+      background-color: white;
+      width: 450px;
+    }
+    .footer a {
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 500;
+    }
+    .footer a:hover {
+      color: white;
+      > i {
+        color: black;
+      }
+    }
+  }
+}
