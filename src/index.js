@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Prueba from './Components/randomQuoteMachine';
+import RandomQuoteMachine from './Components/randomQuoteMachine';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Prueba />
+    <RandomQuoteMachine />
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -13,7 +13,7 @@ class App extends React.Component {
     ],
     index: 0
   }
-  
+
   componentDidMount() {
     //call the API and update state
     fetch(API).then(res => res.json())
@@ -21,26 +21,26 @@ class App extends React.Component {
         this.setState({
           quotes: res.quotes
         }, this.getRandomQuoteIndex);
-    });
+      });
   }
-  
+
   getRandomQuoteIndex = () => {
     const { quotes } = this.state;
-    
-    if(quotes.length > 0) {
+
+    if (quotes.length > 0) {
       const index = Math.floor(Math.random() * quotes.length);
       this.setState({
         index
       })
     }
   }
-  
+
   render() {
     const { quotes, index } = this.state;
     const quote = quotes[index];
     const tweetURL = `https://twitter.com/intent/tweet?text=${quote.quote}-${quote.author}`;
     console.log(tweetURL);
-    
+
     return (
       <div className="wrapper d-flex justify-content-center align-items-center vh-100">
         <div className="row m-auto">
@@ -50,7 +50,7 @@ class App extends React.Component {
                 <blockquote className="blockquote" id="text">
                   <h5 className="mb-0">
                     <i className="fas fa-quote-left"></i>
-                      <span> { quote.quote } </span>
+                    <span> {quote.quote} </span>
                     <i className="fas fa-quote-right"></i>
                   </h5>
                   <footer className="blockquote-footer text-right" id="author">
@@ -59,6 +59,7 @@ class App extends React.Component {
                 </blockquote>
               )
             }
+
             <div className="d-flex justify-content-between">
               <div className="btn-group" role="group">
                 <a className="btn btn-sm btn-primary mx-2 rounded d-flex align-items-center" href={tweetURL} target="_blank" id="tweet-quote">
@@ -70,9 +71,10 @@ class App extends React.Component {
               </button>
             </div>
           </div>
+
           <footer className="col-12 text-center my-3 footer">
-            <a href="https://github.com/mhsantosp">
-              作られた： <i className="fab fa-github-alt"></i> <span> Satsuma</span>
+            <a href="https://github.com/mhsantosp" className="creditos">
+              作られた：<i className="fab fa-github-alt"></i> Satsuma
             </a>
           </footer>
         </div>

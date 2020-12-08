@@ -1,21 +1,39 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,500');
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
 
 .body {
-  background-color: purple;
+  background-color: teal;
   .row {
+    width: 500px;
+
     .box {
       background-color: white;
-      width: 450px;
+      .blockquote {
+        h5 {
+          font-weight: 400;
+        }
+      }
+
+      .btn:focus {
+        outline: none;
+        box-shadow: none;
+      }
     }
-    .footer a {
-      text-decoration: none;
-      font-size: 18px;
-      font-weight: 500;
-    }
-    .footer a:hover {
-      color: white;
-      > i {
+
+    .footer {
+      .creditos {
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 500;
         color: black;
+        i {
+          color: white;
+        }
+      }
+      a.creditos:hover {
+        color: white;
+        i {
+          color: black;
+        }
       }
     }
   }
